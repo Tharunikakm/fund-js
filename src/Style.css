@@ -96,11 +96,13 @@ img{
 }
 .lmtwo
 {
-    color:brown;
+    color:darkred;
+    font-size: 50px;
 }
 .lmthree
 {
-    color:chocolate;
+    color:orangered;
+    font-size: 25px;
 }
 .lmfive
 {
@@ -133,5 +135,9 @@ img{
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
-    padding-top: 20px;
+    padding-top: 20px; 
+}
+.fr
+{
+    background-image: url("https://thumbs.dreamstime.com/b/donations-charity-donation-concept-box-white-background-inscription-donate-153541809.jpg");
 }

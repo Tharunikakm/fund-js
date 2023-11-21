@@ -11,7 +11,7 @@ const Homepage = () => {
       <h4>
       <ul>
           <li>
-              <Link to='Fundraising'>Learn more</Link>
+              <Link to='Fundraising'>ABOUT</Link>
           </li>
           <li>
               <Link to="">HOME</Link> 
@@ -28,7 +28,7 @@ const Homepage = () => {
     <div>
       <ul className='sec'> 
         <li>
-          <div style={{width:500,left:60,fontStyle:'unset',fontSize:23,color:'brown'}}>
+          <div style={{width:500,left:80,fontStyle:'unset',fontSize:23,color:'brown'}}>
             <p>
               <h1>
     
@@ -65,7 +65,7 @@ const Homepage = () => {
         </p>
       </center>
     </div>
-    <div className='th'>
+    {/* <div className='th'>
       <ul  className='imag'>
         <li className='ima'>
           <img  className='three' src="https://static.fundrazr.com/wp-content/uploads/2020/02/4-150x150.jpg"></img><br/>
@@ -85,7 +85,8 @@ const Homepage = () => {
           <b>Nonprofits and Charities</b>
         </li>
       </ul>
-    </div>
+    </div> */}
+    
     <div style={{right:'30px' , left:'40px'}}>
       <ul className='cntwo'>
         <li>

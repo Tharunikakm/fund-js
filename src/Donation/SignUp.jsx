@@ -70,8 +70,7 @@ export default function SignUp() {
           <Box
             component="form"
             noValidate
-            onSubmit={handleSubmit}
-            sx={{ mt: 3 }}
+            onSubmit={handleSubmit} 
           >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -139,7 +138,7 @@ export default function SignUp() {
               <Grid item>
                 <Box>
                 <Link to="/login" variant="body2">
-            Already have an account? Sign in
+            Already have an account? Log in
           </Link>
                 </Box>
               </Grid>
