@@ -12,9 +12,11 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Login from "./Login";
+import axios from "axios";
+import { fireEvent } from "@testing-library/react";
 
 function Copyright(props) {
   return (
@@ -37,14 +39,13 @@ function Copyright(props) {
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
-
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      console.log({
+        firstName: data.get("firstName"),
+        lastName: data.get("age"),
       email: data.get("email"),
       password: data.get("password"),
     });
@@ -81,6 +82,9 @@ export default function SignUp() {
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  // onChange={(event) =>
+                  // setFormData({...formData,firstName:event.target.value})
+                  // }
                   autoFocus
                 />
               </Grid>
@@ -88,9 +92,9 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
+                  id="age"
+                  label="Age"
+                  name="age"
                   autoComplete="family-name"
                 />
               </Grid>
@@ -112,6 +116,9 @@ export default function SignUp() {
                   label="Password"
                   type="password"
                   id="password"
+                  // onChange={(event) =>
+                  //   setFormData({...formData,password:event.target.value})
+                  //   }
                   autoComplete="new-password"
                 />
               </Grid>
