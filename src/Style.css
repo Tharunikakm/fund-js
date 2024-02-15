@@ -174,3 +174,8 @@ img{
 {
     background-color: aliceblue;
 }
+.no{
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.vWEeM1k46Tww92r60FVbzgHaCv&pid=Api&P=0&h=220");
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+}

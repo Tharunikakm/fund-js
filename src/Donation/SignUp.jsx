@@ -17,6 +17,7 @@ import Box from '@mui/material/Box';
 import Login from "./Login";
 import axios from "axios";
 import { fireEvent } from "@testing-library/react";
+import Paper from '@mui/material/Paper'; 
 
 function Copyright(props) {
   return (
@@ -51,6 +52,7 @@ export default function SignUp() {
     });
   };
   return (
+    <div className="no">
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -62,9 +64,12 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
+          <Paper style={{padding:40}}>
+            
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
+          
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
@@ -112,6 +117,16 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
+                  id="phone number"
+                  label="Phone number"
+                  name="phone number"
+                  autoComplete="phone number"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
                   name="password"
                   label="Password"
                   type="password"
@@ -141,6 +156,7 @@ export default function SignUp() {
               Sign Up
             </Button>
             </Link>
+            <br/><br/>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Box>
@@ -151,9 +167,11 @@ export default function SignUp() {
               </Grid>
             </Grid>
           </Box>
+          </Paper>
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 };
